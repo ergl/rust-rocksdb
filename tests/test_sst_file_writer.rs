@@ -29,7 +29,7 @@ fn sst_file_writer_works() {
     let writer_path = dir.path().join("filewriter");
     {
         let opts = Options::default();
-        let mut writer = SstFileWriter::create(&opts);
+        let mut writer = SstFileWriter::create(opts);
         writer.open(&writer_path).unwrap();
         writer.put(b"k1", b"v1").unwrap();
 
